@@ -23,6 +23,10 @@ class Stack
         bool isFull();
         bool isEmpty();
 
+        int getNumItems();
+
+        int* returnPointer(int pointerIndex);
+
 };
 
 

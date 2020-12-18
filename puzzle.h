@@ -16,7 +16,7 @@ class Puzzle
 
         int fortest;
         int _puzzle[9][9];
-        Stack _possibilites[9][9]; //[num][(cage#)stack]
+        Stack _possibilities[9][9]; //[num][(cage#)stack]
         /* int _puzzle[9][9] = {{1,2,3,1,2,3,1,2,3}, //cage tests
                             {4,5,6,4,5,6,4,5,6},
                             {7,8,9,7,8,9,7,8,9},
@@ -30,6 +30,8 @@ class Puzzle
     public:
 
         Puzzle();
+
+        void cleanPuzzle();
 
         //getters
 /* x */ int** getCage(int cage); //returns an array of pointers 
@@ -68,8 +70,6 @@ class Puzzle
 
         bool isFull(); //returns true if the puzzle is full
 
-        void createPuzzle(); //creates puzzle
-
         //int* findPossibilities(int cage, int num); //creates an array of possibilities
 
         vector<int> shuffleVector();
@@ -96,7 +96,10 @@ class Puzzle
         void fillPuzzle(); //creates puzzle
         bool tryNum(int num); //tries to fill puzzle with cagenum
         void updateCagePossibilities(int num, int cage); //returns an array of pointers pointing to possible spots in puzzle
-
+        void emptyCageStack(int num, int cage);
+        bool fillCages(int num, bool backtracked);
+        void destroyOldNum(int num, int cage);
+        bool backTrackedNum(int num);
         
         vector<int> getCageRowCol(int cage, int index);
 

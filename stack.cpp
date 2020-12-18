@@ -29,7 +29,7 @@ void Stack::push(int* space)
     {
         throw runtime_error("Stack is full. Pop an item before trying to push.");
     }
-}
+}   
 
 int* Stack::pop()
 {
@@ -43,4 +43,15 @@ int* Stack::pop()
         throw runtime_error("Stack is empty. Push an item before trying to pop.");
     }
     
+}
+
+int Stack::getNumItems()
+{
+    return _num_items;
+}
+
+
+int* Stack::returnPointer(int pointerIndex)
+{
+    return _stack[pointerIndex];
 }
