@@ -76,8 +76,8 @@ bool Puzzle::checkCol(int col)
     {
         cout << num << " ";
     }
-    cout << endl;
-    delete[] array; */
+    cout << endl;*/
+    delete[] array; 
 
     return true;
 }

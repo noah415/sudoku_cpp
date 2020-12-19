@@ -139,7 +139,7 @@ bool Puzzle::fillCages(int num, bool backtracked)
         else
         {
             this->destroyOldNum(num, cage); //find previously placed num in current cage and set back to 0
-            cout << " deleted" << endl;
+            //cout << " deleted" << endl;
         }
         
 
@@ -156,7 +156,7 @@ bool Puzzle::fillCages(int num, bool backtracked)
         {
             //backtrack a cage 
             cage--;
-            cout << "backtracked";
+            //cout << "backtracked";
         }
             
 
@@ -188,14 +188,14 @@ void Puzzle::fillPuzzle()
 
         if (filledCage)
         {
-            cout << "true" << endl;
+            //cout << "true" << endl;
             backtracked = false;
             num++;
         }
         else
         {
-            this->print();
-            cout << "false" << num << endl;
+            //this->print();
+            //cout << "false" << num << endl;
             backtracked = true;
             num--;
         }

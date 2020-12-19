@@ -1,0 +1,6 @@
+fillPuzzleHelpers.o
+main.o
+puzzle.o
+puzzleCheckers.o
+puzzleGetters.o
+stack.o
