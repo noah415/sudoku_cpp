@@ -17,15 +17,17 @@ class Puzzle
         int fortest;
         int _puzzle[9][9];
         Stack _possibilities[9][9]; //[num][(cage#)stack]
-        /* int _puzzle[9][9] = {{1,2,3,1,2,3,1,2,3}, //cage tests
-                            {4,5,6,4,5,6,4,5,6},
-                            {7,8,9,7,8,9,7,8,9},
-                            {1,2,3,1,2,3,1,2,3},
-                            {4,5,6,4,5,6,4,5,6},
-                            {7,8,9,7,8,9,7,8,9},
-                            {1,2,3,1,2,3,1,2,3},
-                            {4,5,6,4,5,6,4,5,6},
-                            {7,8,9,7,8,9,7,8,9}}; */
+
+
+        /* int _puzzle[9][9] = {{1,2,3,1,2,3,1,2,3}, //uncomment for test; (cage testing)
+                                {4,5,6,4,5,6,4,5,6},
+                                {7,8,9,7,8,9,7,8,9},
+                                {1,2,3,1,2,3,1,2,3},
+                                {4,5,6,4,5,6,4,5,6},
+                                {7,8,9,7,8,9,7,8,9},
+                                {1,2,3,1,2,3,1,2,3},
+                                {4,5,6,4,5,6,4,5,6},
+                                {7,8,9,7,8,9,7,8,9}}; */
 
     public:
 
@@ -34,14 +36,14 @@ class Puzzle
         void cleanPuzzle();
 
         //getters
-/* x */ int** getCage(int cage); //returns an array of pointers 
-/* x */ int** getCol(int col);
-/* x */ int** getRow(int row);
+        int** getCage(int cage); //returns an array of pointers 
+        int** getCol(int col);
+        int** getRow(int row);
 
         //checkers
 
         //checker's pseudo code//
-     /* make an array to hold pointers of appropriate places in puzzle being
+        /* make an array to hold pointers of appropriate places in puzzle being
                 evaluated.
         create a vector that holds ints 1-9
         for every pointer in the array:
@@ -57,16 +59,13 @@ class Puzzle
         return true */
 
 
-/* x */ bool checkCages();
-/* x */ bool checkCage(int cage);
-
-/* x */ bool checkCols();
-/* x */ bool checkCol(int col);
-
-/* x */ bool checkRows();
-/* x */ bool checkRow(int row);
-
-/* x */ bool checkPuzzle();
+        bool checkCages();
+        bool checkCage(int cage);
+        bool checkCols();
+        bool checkCol(int col);
+        bool checkRows();
+        bool checkRow(int row);
+        bool checkPuzzle();
 
         bool isFull(); //returns true if the puzzle is full
 

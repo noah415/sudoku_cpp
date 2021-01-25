@@ -13,9 +13,10 @@ class Stack
         int _num_items;
 
     public:
-
+        //constructor
         Stack();
 
+        //stack methods
         void push(int* space);
 
         int* pop();

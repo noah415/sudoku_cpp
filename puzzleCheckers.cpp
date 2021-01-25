@@ -2,9 +2,6 @@
 
 using namespace std;
 
-
-
-
 bool Puzzle::checkCage(int cage)
 /* returns true if the specified input cage is
 fount valid. */

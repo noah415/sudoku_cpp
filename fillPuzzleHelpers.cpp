@@ -2,9 +2,6 @@
 
 using namespace std;
 
-
-
-
 vector<int> Puzzle::shuffleVector()
 {
     vector<int> vector{0,1,2,3,4,5,6,7,8};
@@ -84,6 +81,7 @@ _possibilities array is changed.*/
         }
     }
 
+    //this is for testing
     /* for (int i = 0; i < count; i++) //manipulates real puzzle and demonstrates how the possibilities
                                 //function works. pops all items in stack so don't leave running!!!
     {                           
